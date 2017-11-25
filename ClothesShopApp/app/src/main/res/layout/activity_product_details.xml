@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jhona.clothesshopapp.ui.ProductDetailsActivity">
+
+    <TextView
+        android:id="@+id/tviTitle"
+        android:textColor="#7DD7CB"
+        android:layout_width="122dp"
+        android:layout_height="53dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Market"
+        android:textStyle="bold"
+        android:textSize="36sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:adjustViewBounds="true"
+        app:srcCompat="@drawable/holder"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="118dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/tviTitle"
+        app:layout_constraintVertical_bias="0.068" />
+
+    <TextView
+        android:id="@+id/tviBrand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Keep Calm - Hombre"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/tviName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Polera"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/tviBrand" />
+
+    <TextView
+        android:id="@+id/tviPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="S/80.00"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_marginTop="-9dp"
+        app:layout_constraintTop_toBottomOf="@+id/tviName"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="194dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="31dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Agregar"
+        android:background="#72C8E2"
+        android:onClick="agregaProducto"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.395" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="0dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tviPrice">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="Cantidad:"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="95dp"
+            tools:layout_editor_absoluteY="464dp" />
+
+        <EditText
+            android:id="@+id/tviAmount"
+            style="@style/Widget.AppCompat.EditText"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:background="#FFFFFF"
+            android:gravity="center_vertical"
+            android:inputType="number"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:text="0"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="95dp"
+            tools:layout_editor_absoluteY="464dp" />
+
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
