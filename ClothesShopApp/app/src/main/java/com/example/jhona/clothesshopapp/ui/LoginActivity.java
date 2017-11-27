@@ -59,19 +59,18 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Vi
             @Override
             public void onClick(View view) {
 
-
-                    logInPresenter.logIn();
-
+                logInPresenter.logIn();
 
             }
         });
-        /*btnRegister.setOnClickListener(new View.OnClickListener() {
+        btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //gotoUserRegister();
+
                 logInPresenter.goToUserRegister();
+
             }
-        });*/
+        });
         /*etePassword.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
@@ -111,16 +110,17 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Vi
 
     @Override
     public void gotoMain() {
-        //savePreferences();
         Intent intent= new Intent(this,MainActivity.class);
         startActivity(intent);
         finish();
+
     }
 
     @Override
     public void gotoUserRegister() {
         Intent intent= new Intent(this,RegisterActivity.class);
         startActivity(intent);
+        finish();
     }
 
     @Override
@@ -156,4 +156,5 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Vi
     public String getPassword() {
         return this.password;
     }
+
 }

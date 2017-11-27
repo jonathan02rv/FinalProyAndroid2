@@ -46,6 +46,7 @@ import com.example.jhona.clothesshopapp.storage.db.CRUDOperations;
 public class MainActivity extends AppCompatActivity implements OnItemClickListener {
 
     private TextView txtUser;
+    private TextView txtLogout;
     private ProductPresenter mainPresenter;
 
 
@@ -67,8 +68,7 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
 
         ui();
         carga();
-
-
+        txtUser.setText("Hola "+ PreferencesHelper.getUserSession(this));
 
     }
 
@@ -76,6 +76,8 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
         recyclerViewProduct= (RecyclerView)findViewById(R.id.recyclerViewProduct);
         mLayoutManager = new GridLayoutManager(this,2);
         recyclerViewProduct.setLayoutManager(mLayoutManager);
+        txtLogout = (TextView)findViewById(R.id.tviLogout);
+        txtUser = (TextView)findViewById(R.id.tviUser);
 
     }
     private void gotoDetails(Product product){
@@ -182,5 +184,13 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
         return true ;
     }
 
+    private void logout() {
+        PreferencesHelper.signOut(this);
+        startActivity(new Intent(this, LoginActivity.class));
+        finish();
+    }
 
+    public void cerrarSesion(View view) {
+        logout();
+    }
 }
