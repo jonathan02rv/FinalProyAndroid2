@@ -71,7 +71,7 @@ public class OrderActivity extends AppCompatActivity {
         recyclerViewProduct.setLayoutManager(mLayoutManager);
 
 
-          lista = crudOperations.getAllProductsPendientes();
+        lista = crudOperations.getAllProductsPendientes();
 
         adapter = new OrderAdapter(this, lista);
 
@@ -134,9 +134,6 @@ public class OrderActivity extends AppCompatActivity {
                                 crudOperations.updateNote(grade);
                             }
 
-                            Intent intent;
-                            intent=new Intent(OrderActivity.this, MainActivity.class);
-                            startActivity(intent);
                             finish();
 
                         }

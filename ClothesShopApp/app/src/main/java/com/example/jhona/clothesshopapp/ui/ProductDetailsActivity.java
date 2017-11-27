@@ -126,9 +126,6 @@ public class ProductDetailsActivity extends AppCompatActivity {
             {
                 @Override
                 public void run() {
-                    Intent intent;
-                    intent=new Intent(ProductDetailsActivity.this, MainActivity.class);
-                    startActivity(intent);
                     finish();
                 }
             };

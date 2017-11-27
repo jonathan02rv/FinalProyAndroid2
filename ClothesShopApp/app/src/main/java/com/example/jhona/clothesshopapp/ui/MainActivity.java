@@ -179,7 +179,6 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
         Intent intent;
         intent=new Intent(MainActivity.this, OrderActivity.class);
         startActivity(intent);
-        finish();
 
         return true ;
     }
